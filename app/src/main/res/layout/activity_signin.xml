@@ -17,19 +17,11 @@
             android:layout_height="wrap_content"
             android:theme="@style/AppTheme.AppBarOverlay">
 
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="?attr/colorPrimary"
-                app:popupTheme="@style/AppTheme.PopupOverlay" />
-
         </android.support.design.widget.AppBarLayout>
 
         <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="?attr/actionBarSize">
+            android:layout_height="match_parent">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -41,8 +33,8 @@
                 <RelativeLayout
                     android:id="@+id/loginsignup19_bg"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:background="@android:color/darker_gray">
+                    android:layout_height="250dp"
+                    android:background="@drawable/vistara">
 
                     <ImageView
                         android:id="@+id/imageView"
@@ -60,7 +52,7 @@
                         android:layout_marginTop="14dp"
                         android:text="Welcome, Guest!"
                         android:textColor="@android:color/white"
-                        android:textSize="22sp" />
+                        android:textSize="26sp"/>
                 </RelativeLayout>
 
                 <android.support.v7.widget.CardView
@@ -71,13 +63,24 @@
                     android:layout_marginLeft="@dimen/activity_horizontal_margin"
                     android:layout_marginRight="@dimen/activity_horizontal_margin"
                     android:layout_marginTop="170dp">
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:paddingBottom="@dimen/activity_vertical_margin">
-
+                        <Button
+                            android:id="@+id/btnchangelanguage"
+                            style="@style/ButtonGreen"
+                            android:layout_width="match_parent"
+                            android:layout_height="46dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin"
+                            android:text="@string/chnglang"
+                            android:textSize="20sp"
+                            android:textAllCaps="true"
+                            android:textColor="@android:color/white" />
                         <EditText
                             style="@style/LoginSignUp9Input"
                             android:hint="Booking Reference Number"
@@ -93,14 +96,81 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/activity_horizontal_margin">
+                            <LinearLayout
+                                android:id="@+id/lin1"
+                                android:layout_width="match_parent"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
 
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/select_disability"
+                                    android:layout_marginBottom="10dp"
+                                    android:textSize="18sp"/>
+                                <CheckBox
+                                    android:id="@+id/ch1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingRight="50dp"
+                                    android:text="@string/phy"
+                                    android:textColor="@color/loginSignup15text"
+                                    android:textStyle="bold" />
+                                <CheckBox
+                                    android:id="@+id/ch2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingRight="50dp"
+                                    android:text="@string/senior"
+                                    android:textColor="@color/loginSignup15text"
+                                    android:textStyle="bold" />
+                                <CheckBox
+                                    android:id="@+id/ch3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingRight="50dp"
+                                    android:text="@string/hear"
+                                    android:textColor="@color/loginSignup15text"
+                                    android:textStyle="bold" />
+                                <CheckBox
+                                    android:id="@+id/ch4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingRight="50dp"
+                                    android:text="@string/speech"
+                                    android:textColor="@color/loginSignup15text"
+                                    android:textStyle="bold" />
+                                <CheckBox
+                                    android:id="@+id/ch5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingRight="50dp"
+                                    android:text="@string/visually"
+                                    android:textColor="@color/loginSignup15text"
+                                    android:textStyle="bold" />
+                                <CheckBox
+                                    android:id="@+id/ch6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingRight="50dp"
+                                    android:text="@string/mental"
+                                    android:textColor="@color/loginSignup15text"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
                             <CheckBox
+                                android:gravity="center"
+                                android:foregroundGravity="center"
+                                android:layout_centerHorizontal="true"
+                                android:layout_below="@id/lin1"
+                                android:id="@+id/remember_me"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:paddingRight="50dp"
                                 android:text="Remember me"
+                                android:textSize="18sp"
                                 android:textColor="@color/loginSignup15text"
-                                android:textStyle="bold" />
+                                android:textStyle="bold"
+                                />
                         </RelativeLayout>
                         <Button
                             android:id="@+id/btnSignIn"
@@ -110,11 +180,11 @@
                             android:layout_gravity="center_horizontal"
                             android:layout_marginLeft="@dimen/activity_horizontal_margin"
                             android:layout_marginRight="@dimen/activity_horizontal_margin"
-                            android:onClick="onClick"
                             android:text="Check-In"
+                            android:textSize="20sp"
                             android:textAllCaps="true"
                             android:textColor="@android:color/white" />
-
+                        <!--android:onClick="onClick"-->
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
