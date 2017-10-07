@@ -16,5 +16,57 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="LoginSignUp19Theme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/loginSignup19colorPrimary</item>
+        <item name="colorPrimaryDark">@color/loginSignup19colorPrimaryDark</item>
+        <item name="colorAccent">@color/loginSignup19colorAccent</item>
+    </style>
 
+    <style name="LoginSignUp19TabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabBackground">?attr/selectableItemBackground</item>
+        <item name="tabIndicatorColor">@android:color/white</item>
+        <item name="tabSelectedTextColor">@android:color/white</item>
+        <item name="tabIndicatorHeight">3dp</item>
+    </style>
+    <style name="ButtonOrange" parent="@android:style/Widget.Button">
+        <item name="android:background">@color/button_orange</item>
+    </style>
+
+    <style name="ButtonWhite" parent="@android:style/Widget.Button">
+        <item name="android:background">@color/button_white</item>
+    </style>
+
+    <style name="ButtonBlue" parent="@android:style/Widget.Button">
+        <item name="android:background">@color/button_blue</item>
+    </style>
+
+    <style name="ButtonGreen" parent="@android:style/Widget.Button">
+        <item name="android:background">@color/button_green</item>
+    </style>
+
+    <style name="ButtonGray" parent="@android:style/Widget.Button">
+        <item name="android:background">@color/button_gray</item>
+    </style>
+
+    <style name="ButtonMagenta" parent="@android:style/Widget.Button">
+        <item name="android:background">@color/button_magenta</item>
+    </style>
+
+    <style name="ButtonYellow" parent="@android:style/Widget.Button">
+        <item name="android:background">@color/button_yellow</item>
+    </style>
+
+    <style name="LoginSignUp9Input">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/activity_vertical_margin</item>
+        <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:background">@color/loginSignup2InputBg</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textCursorDrawable">@drawable/loginsignup_color_cursor</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
 </resources>
